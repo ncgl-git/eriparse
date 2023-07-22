@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+bs4 = "*"
+
+[dev-packages]
+black = "*"
+ruff = "*"
+pre-commit = "*"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+type-check = "mypy ."
+format = "black ."
+ruff = "ruff ."
+

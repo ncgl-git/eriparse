@@ -1,0 +1,30 @@
+[project]
+name = "eriparse"
+description = "Web Scraper of Economic Research Institude HTML."
+version = "0.1.0"
+authors = [
+    { name = "Nicholas Grillini-Lawrence" }
+]
+dependencies = ["bs4"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pre-commit",
+    "ruff",
+    "mypy"
+]
+
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+fix = true
+line-length = 120
+select = ["E", "F", "B", "I"]
+ignore = []
+fixable = ["ALL"]
+unfixable = []
+
+
