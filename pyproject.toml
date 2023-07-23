@@ -1,10 +1,23 @@
 [project]
 name = "eriparse"
-description = "Web Scraper of Economic Research Institude HTML."
-version = "0.1.0"
+description = "HTML Parser of Economic Research Institute Cost of Living HTML."
+license = { text = "MIT" }
 authors = [
     { name = "Nicholas Grillini-Lawrence" }
 ]
+keywords = [
+  "webscraper",
+  "webscraping",
+  "web-scraper",
+  "web-scraping",
+  "html",
+  "eri",
+  "erieri.com",
+  'cost-of-living',
+  "python"
+]
+dynamic = ["readme", "version"]
+
 dependencies = ["bs4"]
 
 [project.optional-dependencies]
@@ -15,6 +28,9 @@ dev = [
     "mypy"
 ]
 
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+readme = {file = ["README.md"], content-type = "text/markdown"}
 
 [tool.black]
 line-length = 120
@@ -26,5 +42,3 @@ select = ["E", "F", "B", "I"]
 ignore = []
 fixable = ["ALL"]
 unfixable = []
-
-
