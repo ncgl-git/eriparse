@@ -25,4 +25,4 @@ and then
 `from eriparse import parse`
 
 ## Tests
-The test use HTML taken from July, 2023.
+The test uses HTML taken from July, 2023.
