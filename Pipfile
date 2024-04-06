@@ -11,11 +11,8 @@ black = "*"
 ruff = "*"
 pre-commit = "*"
 
-[requires]
-python_version = "3.11"
-
 [scripts]
 type-check = "mypy ."
 format = "black ."
 ruff = "ruff ."
-
+tests = "python -m unittest discover -s tests"

@@ -1,0 +1,26 @@
+# Test parsing logic is still valid for the HTML on https://www.erieri.com/cost-of-living
+
+name: Publish
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+    pypi-publish:
+      name: Upload release to PyPI
+      runs-on: ubuntu-latest
+      permissions:
+        id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
+      steps:
+        - uses: actions/checkout@v3
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.x'
+        - run: python -m pip install pipenv
+        - run: pipenv install build
+        - run: pipenv run python -m build
+        - name: Publish package distributions to PyPI
+          uses: pypa/gh-action-pypi-publish@release/v1

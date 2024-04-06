@@ -3,7 +3,7 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from parse import parse
+from eriparse.parse import parse
 
 
 class TestBoston(unittest.TestCase):
